@@ -4,7 +4,10 @@ public class ServiceBusEventBusTests
 {
     private readonly ServiceBusEventBus _eventBus;
 
-    public ServiceBusEventBusTests() => _eventBus = new ServiceBusEventBus("..");
+    public ServiceBusEventBusTests() => _eventBus = new ServiceBusEventBus(
+      Environment.GetEnvironmentVariable("_ServiceBusConnectionString"),
+      null,
+      null);
 
     [Fact]
     public async Task Should_Publish_Message()
