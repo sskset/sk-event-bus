@@ -1,3 +1,8 @@
+using SKEventBus.Exceptions;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace SKEventBus
 {
 
@@ -32,7 +37,7 @@ namespace SKEventBus
       }
       else
       {
-        throw new Exceptions.EventDuplicatedException("This event has been handled already.", eventName);
+        throw new EventDuplicatedException("This event has been handled already.", eventName);
       }
     }
 

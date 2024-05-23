@@ -1,6 +1,8 @@
 ﻿
+using System;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using Azure.Messaging.ServiceBus;
 using Azure.Messaging.ServiceBus.Administration;
 using Microsoft.Extensions.Logging;
@@ -129,7 +131,7 @@ namespace SKEventBus.ServiceBus
         var handler = _serviceProvider.GetService(eventSubscriptionInfo.EventHandlerType);
         
         var methodInfo = handlerType.GetMethod("HandleAsync");
-        var task = (Task)methodInfo.Invoke(handler, [@event]);
+        var task = (Task)methodInfo.Invoke(handler, new object[] { @event });
 
         await task;
       }

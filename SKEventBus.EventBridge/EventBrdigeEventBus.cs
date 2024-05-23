@@ -1,10 +1,12 @@
 ﻿using Amazon.EventBridge;
-using Amazon.Runtime;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SKEventBus.EventBridge
 {
-    public class EventBrdigeEventBus : EventBus
+  public class EventBrdigeEventBus : EventBus
     {
         private readonly string _endpointId;
 

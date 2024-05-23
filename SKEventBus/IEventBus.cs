@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace SKEventBus
 {
   public interface IEventBus

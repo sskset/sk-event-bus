@@ -1,10 +1,14 @@
-namespace SKEventBus.Tests;
+using Xunit;
 
-public class UnitTest1
+namespace SKEventBus.Tests
 {
+
+  public class UnitTest1
+  {
     [Fact]
     public void Test1()
     {
 
     }
+  }
 }

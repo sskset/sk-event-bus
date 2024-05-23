@@ -1,7 +1,12 @@
-namespace SKEventBus.ServiceBus.Tests;
+using System;
+using System.Threading.Tasks;
+using Xunit;
 
-public class ServiceBusEventBusTests
+namespace SKEventBus.ServiceBus.Tests
 {
+
+  public class ServiceBusEventBusTests
+  {
     private readonly ServiceBusEventBus _eventBus;
 
     public ServiceBusEventBusTests() => _eventBus = new ServiceBusEventBus(
@@ -12,7 +17,7 @@ public class ServiceBusEventBusTests
     [Fact]
     public async Task Should_Publish_Message()
     {
-        await _eventBus.PublishAsync(new TestEvent());
+      await _eventBus.PublishAsync(new TestEvent());
     }
 
     // [Fact]
@@ -22,4 +27,5 @@ public class ServiceBusEventBusTests
     //     await _eventBus.PublishAsync(new TestEvent());
     //     await _eventBus.SubscribeAsync();
     // }
+  }
 }

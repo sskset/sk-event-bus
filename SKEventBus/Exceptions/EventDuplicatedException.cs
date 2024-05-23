@@ -1,4 +1,6 @@
-﻿namespace SKEventBus.Exceptions
+﻿using System;
+
+namespace SKEventBus.Exceptions
 {
   [Serializable]
   public class EventDuplicatedException : Exception
