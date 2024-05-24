@@ -20,11 +20,16 @@ namespace SKEventBus
     public abstract Task PublishAsync<TEvent>(TEvent @event) where TEvent : IEvent;
     public abstract Task StartListeningAsync();
 
+    protected string GetEventName<TEvent>() where TEvent : IEvent
+    {
+      return typeof(TEvent).Name;
+    }
+
     public virtual void Register<TEvent, TEventHandler>()
         where TEvent : IEvent
         where TEventHandler : IEventHandler<TEvent>
     {
-      var eventName = typeof(TEvent).Name;
+      var eventName = GetEventName<TEvent>();
 
       if (!_events.ContainsKey(eventName))
       {
@@ -45,7 +50,7 @@ namespace SKEventBus
       where TEvent : IEvent
       where TEventHandler: IEventHandler<TEvent>
     {
-      var eventName = typeof(TEvent).Name;
+      var eventName = GetEventName<TEvent>();
 
       if (!_events.ContainsKey(eventName))
       {

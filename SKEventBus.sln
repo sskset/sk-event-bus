@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.ServiceBus", "SK
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.ServiceBus.Tests", "SKEventBus.ServiceBus.Tests\SKEventBus.ServiceBus.Tests.csproj", "{258F3294-D096-4584-8645-5AC2C5AC5BE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.Tests", "SKEventBus.Tests\SKEventBus.Tests.csproj", "{99AF626E-CE35-48BF-923C-EDD0673B32FF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{8AC5699E-883D-4801-8C2F-6566AB4684AE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.API", "Demo\Test.API\Test.API.csproj", "{41B284D2-95D4-424C-9478-073739214057}"
@@ -19,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events", "Demo\Events\Event
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.EventBridge", "SKEventBus.EventBridge\SKEventBus.EventBridge.csproj", "{AFA9E66A-E93D-4051-B20C-78E357045BE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKEventBus.SNS", "SKEventBus.SNS\SKEventBus.SNS.csproj", "{FB0F0A23-14CD-4DF9-8879-B7D4791FF29B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.SNS", "SKEventBus.SNS\SKEventBus.SNS.csproj", "{FB0F0A23-14CD-4DF9-8879-B7D4791FF29B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.SNS.Tests", "SKEventBus.SNS.Tests\SKEventBus.SNS.Tests.csproj", "{10D25156-7518-4E24-8BE8-09B9DFE83608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKEventBus.Tests", "SKEventBus.Tests\SKEventBus.Tests.csproj", "{F9F49C30-409D-42CA-B80F-17D326F45C71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +41,6 @@ Global
 		{258F3294-D096-4584-8645-5AC2C5AC5BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{258F3294-D096-4584-8645-5AC2C5AC5BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{258F3294-D096-4584-8645-5AC2C5AC5BE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99AF626E-CE35-48BF-923C-EDD0673B32FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99AF626E-CE35-48BF-923C-EDD0673B32FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99AF626E-CE35-48BF-923C-EDD0673B32FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99AF626E-CE35-48BF-923C-EDD0673B32FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{41B284D2-95D4-424C-9478-073739214057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{41B284D2-95D4-424C-9478-073739214057}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41B284D2-95D4-424C-9478-073739214057}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,6 +57,14 @@ Global
 		{FB0F0A23-14CD-4DF9-8879-B7D4791FF29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB0F0A23-14CD-4DF9-8879-B7D4791FF29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB0F0A23-14CD-4DF9-8879-B7D4791FF29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D25156-7518-4E24-8BE8-09B9DFE83608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D25156-7518-4E24-8BE8-09B9DFE83608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D25156-7518-4E24-8BE8-09B9DFE83608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D25156-7518-4E24-8BE8-09B9DFE83608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F49C30-409D-42CA-B80F-17D326F45C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F49C30-409D-42CA-B80F-17D326F45C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F49C30-409D-42CA-B80F-17D326F45C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F49C30-409D-42CA-B80F-17D326F45C71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

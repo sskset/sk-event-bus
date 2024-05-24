@@ -1,8 +1,8 @@
+using System;
 using Xunit;
 
-namespace SKEventBus.Tests
+namespace SKEVentBus.Tests
 {
-
   public class UnitTest1
   {
     [Fact]

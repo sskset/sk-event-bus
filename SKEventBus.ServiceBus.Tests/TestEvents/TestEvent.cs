@@ -15,9 +15,10 @@ namespace SKEventBus.ServiceBus.Tests
 
   public class TestEventHandler : SKEventBus.IEventHandler<TestEvent>
   {
-    public async Task HandleAsync(TestEvent @event)
+    public Task HandleAsync(TestEvent @event)
     {
       Console.WriteLine(@event.TestId);
+      return Task.CompletedTask;
     }
   }
 }
