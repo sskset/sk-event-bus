@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.SNS", "SKEventBu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.SNS.Tests", "SKEventBus.SNS.Tests\SKEventBus.SNS.Tests.csproj", "{10D25156-7518-4E24-8BE8-09B9DFE83608}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKEventBus.Tests", "SKEventBus.Tests\SKEventBus.Tests.csproj", "{F9F49C30-409D-42CA-B80F-17D326F45C71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKEventBus.Tests", "SKEventBus.Tests\SKEventBus.Tests.csproj", "{F9F49C30-409D-42CA-B80F-17D326F45C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKEventBus.RabbitMQ", "SKEventBus.RabbitMQ\SKEventBus.RabbitMQ.csproj", "{EA0DD878-AACB-4862-8A0A-BFC97EA3AB40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{F9F49C30-409D-42CA-B80F-17D326F45C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F49C30-409D-42CA-B80F-17D326F45C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F49C30-409D-42CA-B80F-17D326F45C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0DD878-AACB-4862-8A0A-BFC97EA3AB40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0DD878-AACB-4862-8A0A-BFC97EA3AB40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0DD878-AACB-4862-8A0A-BFC97EA3AB40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0DD878-AACB-4862-8A0A-BFC97EA3AB40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,6 +22,14 @@ namespace SKEventBus.SNS.Tests
       public string UserName { get; set; }
     }
 
+    public class UserCreatedEventHandler : IEventHandler<UserCreaetdEvent>
+    {
+      public Task HandleAsync(UserCreaetdEvent @event)
+      {
+        throw new NotImplementedException();
+      }
+    }
+
     [Fact]
     public async Task Test_PublishAsync()
     {
@@ -32,6 +40,14 @@ namespace SKEventBus.SNS.Tests
       };
 
       await _eventBus.PublishAsync(testEvent);
+    }
+
+    [Fact]
+    public async Task Test_SubscribeAsync()
+    {
+      _eventBus.Register<UserCreaetdEvent, UserCreatedEventHandler>();
+
+      await _eventBus.StartListeningAsync();
     }
   }
 }

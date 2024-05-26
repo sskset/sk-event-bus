@@ -25,6 +25,11 @@ namespace SKEventBus
       return typeof(TEvent).Name;
     }
 
+    protected string GetEventName(Type t)
+    {
+      return t.Name;
+    }
+
     public virtual void Register<TEvent, TEventHandler>()
         where TEvent : IEvent
         where TEventHandler : IEventHandler<TEvent>

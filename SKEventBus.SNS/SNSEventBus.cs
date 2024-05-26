@@ -1,4 +1,6 @@
 ﻿using Amazon.SimpleNotificationService;
+using Amazon.SimpleNotificationService.Model;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
@@ -18,22 +20,37 @@ namespace SKEventBus.SNS
     {
       var eventName = GetEventName<TEvent>();
 
-      var topic = await _amazonSimpleNotificationService.FindTopicAsync(eventName);
-      var topicArn = topic?.TopicArn;
-      if (string.IsNullOrEmpty(topicArn))
-      {
-        var createTopicResponse = await _amazonSimpleNotificationService.CreateTopicAsync(eventName);
-        topicArn = createTopicResponse?.TopicArn;
-      }
+      var topicArn = await GetTopicArnAsync(eventName);
 
       var payload = JsonConvert.SerializeObject(@event);
 
-      await _amazonSimpleNotificationService.PublishAsync(topicArn, payload);
+      var req = new PublishRequest
+      {
+        TopicArn = topicArn,
+        Message = payload,
+        Subject = eventName,
+      };
+
+      var response = await _amazonSimpleNotificationService.PublishAsync(topicArn, payload);
     }
 
     public override Task StartListeningAsync()
     {
       throw new NotImplementedException();
     }
+
+    private async Task<string> GetTopicArnAsync(string topicName)
+    {
+      var topic = await _amazonSimpleNotificationService.FindTopicAsync(topicName);
+      if (topic == null)
+      {
+        var res = await _amazonSimpleNotificationService.CreateTopicAsync(topicName);
+
+        return res.TopicArn;
+      }
+
+      return topic.TopicArn;
+    }
+
   }
 }
